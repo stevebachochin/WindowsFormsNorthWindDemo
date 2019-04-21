@@ -13,7 +13,7 @@ namespace NorthWind
     public partial class Form1 : Form
     {
         NorthwindEntities we;
-        public static Models.SelectedCustomer selectedCutomer = new Models.SelectedCustomer();
+        //public static Models.SelectedCustomer selectedCutomer = new Models.SelectedCustomer();
 
         public Form1()
         {
@@ -51,15 +51,15 @@ namespace NorthWind
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            selectedCutomer.customerID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            selectedCutomer.companyName = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            Classes.Common.selectedCutomer.customerID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            Classes.Common.selectedCutomer.companyName = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(selectedCutomer.customerID.ToString());
+            MessageBox.Show(Classes.Common.selectedCutomer.customerID.ToString());
         }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

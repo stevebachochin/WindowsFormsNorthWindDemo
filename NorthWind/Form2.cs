@@ -21,7 +21,7 @@ namespace NorthWind
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Form1.selectedCutomer.customerID.ToString() + " --- " + Form1.selectedCutomer.companyName.ToString());
+            MessageBox.Show(Classes.Common.selectedCutomer.customerID.ToString() + " --- " + Classes.Common.selectedCutomer.companyName.ToString());
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

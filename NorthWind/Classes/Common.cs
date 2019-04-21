@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace NorthWind.Classes
 {
-    class Class1
+    class Common
     {
+        public static Models.SelectedCustomer selectedCutomer = new Models.SelectedCustomer();
     }
 }
